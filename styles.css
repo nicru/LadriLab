@@ -1,0 +1,108 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Style the navbar with matte black background and bone white text */
+.navbar {
+    background-color: #272727;
+    color: #E5E5E5;
+    padding: 10px 0;
+    height: 40px; /* Fixed height for the navbar (adjust as needed) */
+}
+
+/* Center the content within the navbar */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px; /* Add left padding to create spacing */
+}
+
+/* Style the page name on the left */
+.navbar-brand a {
+    font-size: 24px; /* Font size for the page name */
+    text-decoration: none; /* Remove underlines from the link */
+    color: #E5E5E5; /* Bone white text color for the page name */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style the navigation options on the right */
+.navbar-menu {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar-menu li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Spacing between menu items (adjust as needed) */
+}
+
+/* Style the links in the menu */
+.navbar-menu a {
+    text-decoration: none; /* Remove underlines from the links */
+    color: #E5E5E5; /* Bone white text color for the links */
+    font-weight: bold; /* Make the links bold (adjust as needed) */
+    font-size: 16px; /* Font size for the links */
+}
+
+/* Style the hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    background-color: #d6d6d6;
+    color: #E5E5E5;
+    height: 85vh; /* 85% of viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the text overlay */
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px; /* Padding for the text overlay */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the text and button */
+.hero-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero-text button {
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style the footer with matte black background and bone white text */
+footer {
+    background-color: #272727;
+    color: #E5E5E5;
+    padding: 10px 0;
+    height: 80px; /* Fixed height for the footer (adjust as needed) */
+    display: flex;
+    justify-content: space-between; /* Separate content on the left and right */
+    align-items: center;
+}
+
+/* Style the left side of the credits */
+.left {
+    flex: 1; /* Take up equal space on the left side */
+    text-align: left;
+    padding-left: 20px; /* Add left padding */
+}
+
+/* Style the right side of the credits */
+.right {
+    flex: 1; /* Take up equal space on the right side */
+    text-align: right;
+    padding-right: 20px; /* Add right padding */
+}
