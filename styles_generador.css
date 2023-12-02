@@ -56,7 +56,7 @@ body {
     color: #ddd; /* Light grey for hover effect */
 }
 
-/* Estilos para la sección de contenedores */
+/* Estilos para la secciÃ³n de contenedores */
 .contenedores {
     background: #FFFDD0;
     position: relative; /* Establish a positioning context */
@@ -83,7 +83,7 @@ body {
     flex-direction: column; /* Stack children vertically */
 }
 
-/* Estilo adicional para las imágenes */
+/* Estilo adicional para las imÃ¡genes */
 .contenedor img {
     max-width: 100%; /* Max width of the image to be 100% of the container */
     max-height: 100%; /* Max height of the image to be 100% of the container */
@@ -144,26 +144,36 @@ footer {
     color: #fff; /* White text for all footer content */
 }
 
-/* Style the download button */
+/* Container for the Download Button */
+.download-button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically, if necessary */
+    /* Add additional styling as needed based on your layout */
+}
+
+/* Style the Download Button */
 .download-button {
-    background: rgba(52, 152, 219, 0.8); /* Semi-transparent background */
+    background: rgba(52, 152, 219, 0.8);
     color: white;
     border: none;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for better visibility */
-    flex-grow: 1; /* Allow button to fill the space in its container */
-    margin: 0 5px; /* Add margin between buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+    margin-bottom: 1rem;
+    max-width: 200px;
+    text-align: center;
 }
 
-/* Style adjustments for smaller screens */
+/* Adjustments for Smaller Screens */
 @media (max-width: 768px) {
     .download-button {
-        padding: 0.5rem; /* Adjust padding for smaller screens */
+        padding: 0.5rem;
+        font-size: 0.9rem;
     }
 }
-
 
 #canvas {
     display: none;

@@ -35,7 +35,7 @@ function combineImagesAndDownload() {
         // Create an anchor element to trigger the download
         const downloadLink = document.createElement('a');
         downloadLink.href = dataURL;
-        downloadLink.download = 'combined_dog.png';
+        downloadLink.download = 'perrito.png';
 
         // Simulate a click on the anchor element to initiate the download
         downloadLink.click();
