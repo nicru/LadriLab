@@ -104,6 +104,10 @@ body {
     margin: 0 5px; /* Agrega margen entre los botones */
 }
 
+.prev-button:hover, .next-button:hover {
+    background-color: #2980b9; /* Cambia el color de fondo del botón del hero al pasar el cursor sobre él */
+}
+
 /* Ajustes de estilo para pantallas más pequeñas */
 @media (max-width: 768px) {
     .prev-button, .next-button {
@@ -166,6 +170,10 @@ footer {
     margin-bottom: 1rem; /* Margen inferior */
     max-width: 200px; /* Ancho máximo del botón */
     text-align: center; /* Alineación del texto al centro */
+}
+
+.download-button:hover {
+    background-color: #2980b9; /* Cambia el color de fondo del botón del hero al pasar el cursor sobre él */
 }
 
 /* Ajustes para pantallas más pequeñas */
