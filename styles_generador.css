@@ -143,3 +143,28 @@ footer {
 .footer .left, .footer .right {
     color: #fff; /* White text for all footer content */
 }
+
+/* Style the download button */
+.download-button {
+    background: rgba(52, 152, 219, 0.8); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for better visibility */
+    flex-grow: 1; /* Allow button to fill the space in its container */
+    margin: 0 5px; /* Add margin between buttons */
+}
+
+/* Style adjustments for smaller screens */
+@media (max-width: 768px) {
+    .download-button {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
+
+
+#canvas {
+    display: none;
+}
