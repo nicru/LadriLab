@@ -1,0 +1,145 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark grey text for better readability */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height of the viewport */
+    margin: 0; /* Remove default margin to prevent any unwanted space */
+}
+
+/* Style the navbar with black background and white text */
+.navbar {
+    background-color: #333; /* Black for a classic look */
+    color: #fff; /* White text for better readability */
+    padding: 0.625em 0; /* Updated to relative unit */
+}
+
+/* Center the content within the navbar */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em; /* Updated for consistent horizontal padding */
+}
+
+/* Style the page name on the left */
+.navbar-brand a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff; /* Updated to white text */
+    font-weight: bold;
+}
+
+/* Style the navigation options on the right */
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Style the links in the menu */
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff; /* Updated to white text */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Add hover effect to navbar links */
+.navbar-menu a:hover {
+    color: #ddd; /* Light grey for hover effect */
+}
+
+/* Estilos para la sección de contenedores */
+.contenedores {
+    background: #1a1a1a;
+    position: relative; /* Establish a positioning context */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    height: calc(100vh - 120px); /* Set the height to fill the screen minus the header and footer */
+    margin: 0 auto; /* Center the container section */
+    padding: 20px; /* Padding inside the container section */
+    display: grid; /* Use grid for layout */
+    grid-template-columns: auto 1fr auto; /* Button, image container, button */
+    gap: 10px; /* Space between elements */
+}
+
+/* Estilos para cada contenedor */
+.contenedor {
+    position: relative; /* Make the container a positioning context */
+    width: 100%; /* Full width of the grid column */
+    height: 100%; /* Make containers use available vertical space */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    overflow: hidden; /* Hide overflow to maintain the clean look */
+    margin: 20px; /* Add some space around the containers */
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Estilo adicional para las imágenes */
+.contenedor img {
+    max-width: 100%; /* Max width of the image to be 100% of the container */
+    max-height: 100%; /* Max height of the image to be 100% of the container */
+    object-fit: cover; /* Cover the container fully while preserving aspect ratio */
+}
+
+/* Remove the absolute positioning and vertical centering */
+.prev-button, .next-button {
+    /* Removed properties: position, top, left, right, transform */
+    background: rgba(52, 152, 219, 0.8); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for better visibility */
+    flex-grow: 1; /* Allow buttons to fill the space in their container */
+    margin: 0 5px; /* Add margin between buttons */
+}
+
+/* Style adjustments for smaller screens */
+@media (max-width: 768px) {
+    .prev-button, .next-button {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
+
+/* You may also want to adjust the flex container that holds the buttons */
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    margin-top: 10px; /* Space between the image and the button group */
+}
+
+/* Further adjustments for mobile screens */
+@media (max-width: 480px) {
+    .contenedor {
+        width: 100%; /* Full width containers for small screens */
+        margin: 10px 0; /* Adjust vertical margin */
+    }
+
+    .prev-button, .next-button {
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Black background for footer */
+    color: #fff; /* White text for better readability */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Align content to the sides */
+    align-items: center; /* Center content vertically */
+}
+
+.footer .left, .footer .right {
+    color: #fff; /* White text for all footer content */
+}

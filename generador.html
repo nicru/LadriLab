@@ -4,11 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LadriLab - Generador</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles_generador.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
+
+  <!-- Comienzo de la Barra de Navegación -->
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+      <div class="navbar-brand">
+          <a href="/">LadriLab</a>
+      </div>
+      <ul class="navbar-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="generador.html">Generador</a></li>
+      </ul>
+  </div>
+</nav>
+
+<!-- Final de la Barra de Navegación -->
+
+<!-- Comienzo de la Sección de Contenidos -->
+
+<section class="contenedores">
+  
+  <!-- Primer contenedor (Cabeza) -->
+  <div class="contenedor contenedor-cabeza">
+    <img src="img/dibujos perritos/Perro_1_Cabeza.png" alt="Cabeza del perro">
+    <div class="button-group">
+      <button class="prev-button" onclick="navigate('prev', 'cabeza')">Anterior</button>
+      <button class="next-button" onclick="navigate('next', 'cabeza')">Siguiente</button>
+    </div>
+  </div>
+  
+  <!-- Segundo contenedor (Cuerpo) -->
+  <div class="contenedor contenedor-cuerpo">
+    <img src="img/dibujos perritos/Perro_1_Cuerpo.png" alt="Cuerpo del perro">
+    <div class="button-group">
+      <button class="prev-button" onclick="navigate('prev', 'cuerpo')">Anterior</button>
+      <button class="next-button" onclick="navigate('next', 'cuerpo')">Siguiente</button>
+    </div>
+  </div>
+  
+  <!-- Tercer contenedor (Cola) -->
+  <div class="contenedor contenedor-cola">
+    <img src="img/dibujos perritos/Perro_1_Cola.png" alt="Cola del perro">
+    <div class="button-group">
+      <button class="prev-button" onclick="navigate('prev', 'cola')">Anterior</button>
+      <button class="next-button" onclick="navigate('next', 'cola')">Siguiente</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- Final de la Sección de Contenidos -->
+
+<!-- Comienzo del Footer -->
+
+<footer>
+  <p class="left">Proyecto Web para Programación Creativa</p>
+  <p class="right">Escuela de Diseño UC, Pontificia Universidad Católica de Chile</p>
+</footer>
+<!-- Final del Footer -->
+
+<!-- Inicio de la Sección Javascript -->
+
+<script src="carousel.js"></script>
+
+<!-- Final de la Sección Javascript -->
 
 </body>
 </html>

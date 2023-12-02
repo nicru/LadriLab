@@ -121,7 +121,7 @@ footer {
     align-items: center; /* Center content vertically */
 }
 
-.left, .right {
+.footer .left, .footer .right {
     color: #fff; /* White text for all footer content */
 }
 
