@@ -1,13 +1,18 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark grey text for better readability */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height of the viewport */
+    margin: 0; /* Remove default margin to prevent any unwanted space */
 }
 
-/* Style the navbar with matte black background and bone white text */
+/* Style the navbar with black background and white text */
 .navbar {
-    background-color: #272727;
-    color: #E5E5E5;
-    padding: 10px 0;
-    height: 40px; /* Fixed height for the navbar (adjust as needed) */
+    background-color: #333; /* Black for a classic look */
+    color: #fff; /* White text for better readability */
+    padding: 0.625em 0; /* Updated to relative unit */
 }
 
 /* Center the content within the navbar */
@@ -15,94 +20,123 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px; /* Add left padding to create spacing */
+    padding: 0 1em; /* Updated for consistent horizontal padding */
 }
 
 /* Style the page name on the left */
 .navbar-brand a {
-    font-size: 24px; /* Font size for the page name */
-    text-decoration: none; /* Remove underlines from the link */
-    color: #E5E5E5; /* Bone white text color for the page name */
-    font-weight: bold; /* Make the text bold */
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff; /* Updated to white text */
+    font-weight: bold;
 }
 
 /* Style the navigation options on the right */
 .navbar-menu {
-    list-style-type: none; /* Remove bullet points from the list */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-menu li {
-    display: inline; /* Display list items horizontally */
-    margin-right: 20px; /* Spacing between menu items (adjust as needed) */
+    display: inline;
+    margin-right: 20px;
 }
 
 /* Style the links in the menu */
 .navbar-menu a {
-    text-decoration: none; /* Remove underlines from the links */
-    color: #E5E5E5; /* Bone white text color for the links */
-    font-weight: bold; /* Make the links bold (adjust as needed) */
-    font-size: 16px; /* Font size for the links */
+    text-decoration: none;
+    color: #fff; /* Updated to white text */
+    font-weight: bold;
+    font-size: 16px;
 }
 
-/* Style the hero section */
+/* Add hover effect to navbar links */
+.navbar-menu a:hover {
+    color: #ddd; /* Light grey for hover effect */
+}
+
+/* Style the hero section to fill the space between navbar and footer */
 .hero {
-    position: relative;
-    text-align: center;
-    background-color: #d6d6d6;
-    color: #E5E5E5;
-    height: 85vh; /* 85% of viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* Style the hero section to fill the space between navbar and footer */
+    .hero {
+        position: relative; /* Set position to relative */
+        text-align: left;
+        flex-grow: 1; /* Allow hero section to grow and fill available space */
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        overflow: hidden; /* Hide overflow to maintain the clean look */
+    }
 }
 
-/* Style the text overlay */
+.hero img {
+    width: 100%;
+    height: calc(100vh - 120px); /* Adjust height to fill space between nav and footer */
+    object-fit: cover; /* Cover the entire space of hero section */
+}
+
+/* Style the text overlay for clear readability */
 .hero-text {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 20px; /* Padding for the text overlay */
-    border-radius: 10px; /* Rounded corners */
+    position: absolute;
+    background-color: transparent;
+    padding: 5%;
+    border-radius: 2.5%;
+    top: 50%;
+    left: 0; /* Adjust left to 0 for left alignment */
+    transform: translateY(-50%); /* Center vertically */
+    max-width: 90%;
 }
 
 /* Style the text and button */
-.hero-text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.hero-text h1 {
+    font-size: 4rem; /* Default font size */
+    color: #333; /* Dark grey text for better readability */
+    margin-left: 2.5%;
 }
 
 .hero-text button {
-    background-color: #3498db; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #3498db;
+    margin-left: 2.5%;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem; /* Default font size for the button */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
-/* Style the footer with matte black background and bone white text */
+/* Add hover effect to button */
+.hero-text button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Styling */
 footer {
-    background-color: #272727;
-    color: #E5E5E5;
-    padding: 10px 0;
-    height: 80px; /* Fixed height for the footer (adjust as needed) */
+    background-color: #333; /* Black background for footer */
+    color: #fff; /* White text for better readability */
+    text-align: center;
+    padding: 20px;
     display: flex;
-    justify-content: space-between; /* Separate content on the left and right */
-    align-items: center;
+    justify-content: space-between; /* Align content to the sides */
+    align-items: center; /* Center content vertically */
 }
 
-/* Style the left side of the credits */
-.left {
-    flex: 1; /* Take up equal space on the left side */
-    text-align: left;
-    padding-left: 20px; /* Add left padding */
+.footer .left, .footer .right {
+    color: #fff; /* White text for all footer content */
 }
 
-/* Style the right side of the credits */
-.right {
-    flex: 1; /* Take up equal space on the right side */
-    text-align: right;
-    padding-right: 20px; /* Add right padding */
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .hero-text h2 {
+        font-size: 2rem; /* Increase font size for larger screens */
+    }
+
+    .hero-text button {
+        font-size: 1.5rem; /* Increase button font size for larger screens */
+    }
 }
+
+/* Further adjustments and responsive design considerations can be added as needed */
