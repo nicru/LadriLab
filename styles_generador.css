@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fff; /* White background */
+    background: #FFFDD0;
     color: #333; /* Dark grey text for better readability */
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ body {
 
 /* Estilos para la sección de contenedores */
 .contenedores {
-    background: #1a1a1a;
+    background: #FFFDD0;
     position: relative; /* Establish a positioning context */
     justify-content: center; /* Center the items horizontally */
     align-items: center; /* Center the items vertically */
@@ -108,6 +108,17 @@ body {
     .prev-button, .next-button {
         padding: 0.5rem; /* Adjust padding for smaller screens */
     }
+}
+
+/* Style the button inside the .hero-text */
+.hero-text button a {
+    color: #fff; /* Set the desired link color within the button */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Style the button inside the .hero-text on hover */
+.hero-text button:hover a {
+    color: #ddd; /* Change link color on hover if needed */
 }
 
 /* You may also want to adjust the flex container that holds the buttons */
