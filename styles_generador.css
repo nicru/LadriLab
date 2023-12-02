@@ -110,17 +110,6 @@ body {
     }
 }
 
-/* Style the button inside the .hero-text */
-.hero-text button a {
-    color: #fff; /* Set the desired link color within the button */
-    text-decoration: none; /* Remove underline */
-}
-
-/* Style the button inside the .hero-text on hover */
-.hero-text button:hover a {
-    color: #ddd; /* Change link color on hover if needed */
-}
-
 /* You may also want to adjust the flex container that holds the buttons */
 .button-group {
     display: flex;
