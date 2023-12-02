@@ -58,16 +58,13 @@ body {
 
 /* Style the hero section to fill the space between navbar and footer */
 .hero {
-    /* Style the hero section to fill the space between navbar and footer */
-    .hero {
-        position: relative; /* Set position to relative */
-        text-align: left;
-        flex-grow: 1; /* Allow hero section to grow and fill available space */
-        display: flex;
-        justify-content: left;
-        align-items: flex-start;
-        overflow: hidden; /* Hide overflow to maintain the clean look */
-    }
+    position: relative; /* Set position to relative */
+    text-align: left;
+    flex-grow: 1; /* Allow hero section to grow and fill available space */
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    overflow: hidden; /* Hide overflow to maintain the clean look */
 }
 
 .hero img {
