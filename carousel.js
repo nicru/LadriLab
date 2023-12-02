@@ -1,4 +1,6 @@
-// Object to hold the image sources for each part of the dog
+// Este script maneja la funcionalidad del carrusel que permite al usuario navegar a través de diferentes partes de un perro para su generación.
+
+// Objeto que almacena las fuentes de imagen para cada parte del perro.
 const dogParts = {
     cabeza: [
         'img/dibujos perritos/Perro_1_Cabeza.png',
@@ -32,30 +34,30 @@ const dogParts = {
     ]
 };
 
-// Current index for each part
+// Índice actual para cada parte del perro.
 const currentIndex = {
     cabeza: 0,
     cuerpo: 0,
     cola: 0
 };
 
-// Function to navigate through the images
+// Función para navegar a través de las imágenes.
 function navigate(direction, part) {
-    // Update the index based on the direction
+    // Actualiza el índice según la dirección.
     if (direction === 'next') {
         currentIndex[part] = (currentIndex[part] + 1) % dogParts[part].length;
     } else if (direction === 'prev') {
         currentIndex[part] = (currentIndex[part] - 1 + dogParts[part].length) % dogParts[part].length;
     }
 
-    // Select the correct img element based on the part
+    // Selecciona el elemento img correcto según la parte.
     const imgElement = document.querySelector(`.contenedor-${part} img`);
     imgElement.src = dogParts[part][currentIndex[part]];
 }
 
-// Add this event listener once the DOM is fully loaded
+// Agrega este controlador de eventos una vez que se haya cargado completamente el DOM.
 document.addEventListener('DOMContentLoaded', () => {
-    // Set up the initial images for each container
+    // Configura las imágenes iniciales para cada contenedor.
     document.querySelector('.contenedor-cabeza img').src = dogParts.cabeza[currentIndex.cabeza];
     document.querySelector('.contenedor-cuerpo img').src = dogParts.cuerpo[currentIndex.cuerpo];
     document.querySelector('.contenedor-cola img').src = dogParts.cola[currentIndex.cola];

@@ -1,125 +1,124 @@
-/* Reset some default styles */
+/* Reset de algunos estilos predeterminados */
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    font-family: 'Montserrat', sans-serif; /* Define la fuente de texto predeterminada */
+    background-color: #fff; /* Establece el color de fondo del cuerpo */
+    color: #333; /* Establece el color de texto predeterminado */
+    display: flex; /* Usa un modelo de caja flexible para el cuerpo */
+    flex-direction: column; /* Establece la dirección de flujo de flexión como columna */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo para ocupar al menos el 100% del viewport */
 }
 
-/* Navbar styles */
+/* Estilos de la barra de navegación */
 .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #333; /* Establece el color de fondo de la barra de navegación */
+    color: #fff; /* Establece el color de texto de la barra de navegación */
+    padding: 10px 0; /* Añade relleno en la parte superior e inferior de la barra de navegación */
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1em;
+    display: flex; /* Usa un modelo de caja flexible para el contenedor */
+    justify-content: space-between; /* Distribuye el espacio disponible entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    padding: 0 1em; /* Añade relleno a los lados izquierdo y derecho del contenedor */
 }
 
 .navbar-brand a {
-    font-size: 24px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    font-size: 24px; /* Tamaño de fuente del logotipo de la barra de navegación */
+    text-decoration: none; /* Elimina el subrayado de los enlaces del logotipo */
+    color: #fff; /* Color del logotipo de la barra de navegación */
+    font-weight: bold; /* Establece el peso de fuente en negrita */
 }
 
 .navbar-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style-type: none; /* Elimina los marcadores de lista de la lista de menú */
+    margin: 0; /* Elimina el margen de la lista de menú */
+    padding: 0; /* Elimina el relleno de la lista de menú */
 }
 
 .navbar-menu li {
-    display: inline;
-    margin-right: 20px;
+    display: inline; /* Muestra los elementos de la lista en línea (horizontalmente) */
+    margin-right: 20px; /* Agrega un margen derecho entre los elementos de la lista */
 }
 
 .navbar-menu a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
+    text-decoration: none; /* Elimina el subrayado de los enlaces del menú */
+    color: #fff; /* Color del texto del menú */
+    font-weight: bold; /* Establece el peso de fuente en negrita */
+    font-size: 16px; /* Tamaño de fuente del menú */
 }
 
 .navbar-menu a:hover {
-    color: #ddd;
+    color: #ddd; /* Cambia el color del texto del menú al pasar el cursor sobre él */
 }
 
-/* Hero section styles */
+/* Estilos de la sección del hero */
 .hero {
-    position: relative;
-    text-align: left;
-    flex-grow: 1;
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    overflow: hidden;
+    position: relative; /* Establece la posición relativa para el elemento hero */
+    text-align: left; /* Alinea el texto a la izquierda */
+    flex-grow: 1; /* Permite que la sección del herocrezca en tamaño */
+    display: flex; /* Usa un modelo de caja flexible para el hero */
+    justify-content: left; /* Alinea el contenido del hero a la izquierda */
+    align-items: flex-start; /* Alinea los elementos del heroen la parte superior */
+    overflow: hidden; /* Oculta el contenido que desborda del hero */
 }
 
 .hero img {
-    width: 100%;
-    height: calc(100vh - 120px);
-    object-fit: cover;
+    width: 100%; /* Ancho del 100% para la imagen del hero */
+    height: calc(100vh - 120px); /* Calcula la altura de la imagen del hero */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo su relación de aspecto */
 }
 
-/* Hero text styles */
+/* Estilos del texto del hero */
 .hero-text {
-    position: absolute;
-    background-color: transparent;
-    padding: 5%;
-    border-radius: 2.5%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    max-width: 90%;
+    position: absolute; /* Establece la posición absoluta para el texto del hero */
+    background-color: transparent; /* Fondo transparente para el texto del hero */
+    padding: 5%; /* Añade relleno alrededor del texto del hero */
+    border-radius: 2.5%; /* Establece un borde redondeado para el texto del hero */
+    top: 50%; /* Coloca el texto del hero en la mitad superior */
+    left: 0; /* Alinea el texto del hero a la izquierda */
+    transform: translateY(-50%); /* Desplaza el texto del hero verticalmente hacia arriba */
+    max-width: 90%; /* Establece un ancho máximo para el texto del hero */
 }
 
 .hero-text h1 {
-    font-size: 4rem;
-    color: #333;
-    margin-left: 2.5%;
+    font-size: 4rem; /* Tamaño de fuente del título del hero */
+    color: #333; /* Color del texto del título del hero */
+    margin-left: 2.5%; /* Agrega margen a la izquierda del título del hero */
 }
 
-/* Hero button styles */
+/* Estilos del botón del hero */
 .hero-button {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    margin: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 2rem;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    display: inline-block; /* Muestra el botón como elemento en línea */
+    background-color: #3498db; /* Color de fondo del botón del hero*/
+    color: #fff; /* Color del texto del botón del hero */
+    margin: 1rem; /* Agrega margen alrededor del botón del hero*/
+    padding: 10px 20px; /* Añade relleno al botón del hero */
+    border: none; /* Elimina el borde del botón del hero */
+    border-radius: 5px; /* Establece un borde redondeado para el botón del hero */
+    text-decoration: none; /* Elimina el subrayado del botón del hero */
+    font-size: 2rem; /* Tamaño de fuente del botón del hero */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón del hero */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra al botón del hero */
+    transition: background-color 0.3s ease; /* Agrega una transición suave al color de fondo del botón del hero */
 }
 
 .hero-button:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Cambia el color de fondo del botón del hero al pasar el cursor sobre él */
 }
 
-/* Footer styles */
+/* Estilos del pie de página */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #333; /* Establece el color de fondo del pie de página */
+    color: #fff; /* Establece el color de texto del pie de página */
+    text-align: center; /* Alinea el texto del pie de página al centro */
+    padding: 20px; /* Añade relleno alrededor del pie de página */
+    display: flex; /* Usa un modelo de caja flexible para el pie de página */
+    justify-content: space-between; /* Distribuye el espacio disponible entre los elementos del pie de página */
+    align-items: center; /* Centra los elementos verticalmente dentro del pie de página */
 }
 
 .footer .left, .footer .right {
-    color: #fff;
+    color: #fff; /* Color del texto en el pie de página */
 }
 
-/* Media queries for responsive design can be added as needed */

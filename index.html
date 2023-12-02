@@ -1,49 +1,66 @@
+<!--
+Este documento HTML representa la página de inicio de LadriLab, que es la primera página que los usuarios verán al visitar el sitio web. El objetivo principal de esta página es proporcionar una introducción a LadriLab y alentar a los visitantes a explorar más a través del botón "Comenzar a mezclar", que los llevará a la página del generador.
+
+La estructura de la página incluye una barra de navegación en la parte superior que facilita la transición entre la página de inicio y la del generador. Además, se presenta una sección destacada llamada "Hero" que contiene una imagen representativa relacionada con LadriLab y un título atractivo que destaca la funcionalidad principal del sitio: la creación de perros únicos a través de la mezcla de partes.
+
+El diseño de la página está basado en estilos CSS y se utiliza la fuente "Montserrat" de Google Fonts para una apariencia elegante y legible.
+
+La información del pie de página (footer) indica claramente que este proyecto web es parte de un curso de Programación Creativa y está relacionado con la Escuela de Diseño UC de la Pontificia Universidad Católica de Chile.
+
+Esta página de inicio es esencial para proporcionar una primera impresión positiva a los visitantes y dirigirlos hacia la funcionalidad principal del sitio web.
+
+Este comentario tiene como objetivo proporcionar una visión general del propósito y la estructura de la página de inicio para facilitar la revisión y comprensión por parte del profesor.
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LadriLab</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>LadriLab</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Enlace a la fuente de Google Fonts -->
 
-<!-- Add Favicon -->
-<link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Agregar Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Enlace al favicon del sitio -->
 
 </head>
 <body>
 
 <!-- Comienzo de la Barra de Navegación -->
 
-<!-- Navbar -->
+<!-- Navbar (Barra de navegación) -->
 <nav class="navbar">
     <div class="container">
         <div class="navbar-brand">
-            <a href="index.html">LadriLab</a>
+            <a href="index.html">LadriLab</a> <!-- Logo del sitio con enlace a la página de inicio -->
         </div>
         <ul class="navbar-menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="generador.html">Generador</a></li>
+            <li><a href="index.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
+            <li><a href="generador.html">Generador</a></li> <!-- Enlace a la página del generador -->
         </ul>
     </div>
 </nav>
 
 <!-- Final de la Barra de Navegación -->
 
-<!-- Comienzo de la Sección Hero -->
+<!-- Comienzo de la Sección Hero (Sección de presentación) -->
 
 <section class="hero">
-    <img src="https://raw.githubusercontent.com/nicru/LadriLab/main/img/hero_banner.png" alt="Simple and elegant depiction related to LadriLab">
+    <img src="https://raw.githubusercontent.com/nicru/LadriLab/main/img/hero_banner.png" alt="Imagen representativa simple y elegante relacionada con LadriLab">
+    <!-- Imagen representativa del hero -->
     <div class="hero-text">
         <h1>Crea un amigo peludo único. <br>
-        ¡Mezcla y encuentra tu perro perfecto!</h1>
-        <a href="generador.html" class="hero-button">¡Comenzar a mezclar!</a>
+        ¡Mezcla y encuentra tu perro perfecto!</h1> <!-- Título del hero -->
+        <a href="generador.html" class="hero-button">¡Comenzar a mezclar!</a> <!-- Botón de llamada a la acción -->
     </div>
 </section>
 
 <!-- Final de la Sección Hero -->
 
-<!-- Comienzo del Footer -->
+<!-- Comienzo del Footer (Pie de página) -->
 
 <footer>
     <p class="left">Proyecto Web para Programación Creativa</p>

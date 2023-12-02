@@ -1,9 +1,11 @@
+// Esta función combina las imágenes seleccionadas del carrusel y permite al usuario descargar la imagen combinada.
+
 function combineImagesAndDownload() {
-    // Create a virtual canvas
+    // Crear un lienzo virtual
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
 
-    // Get the images from the current state of the carousel
+    // Obtener las imágenes del estado actual del carrusel
     const cabezaImg = new Image();
     cabezaImg.src = dogParts.cabeza[currentIndex.cabeza];
 
@@ -13,34 +15,34 @@ function combineImagesAndDownload() {
     const colaImg = new Image();
     colaImg.src = dogParts.cola[currentIndex.cola];
 
-    // Wait for all images to load
+    // Esperar a que se carguen todas las imágenes
     Promise.all([cabezaImg, cuerpoImg, colaImg].map(img => {
         return new Promise(resolve => {
             img.onload = resolve;
         });
     })).then(() => {
-        // Set the canvas size to match the combined image size
+        // Establecer el tamaño del lienzo para que coincida con el tamaño de la imagen combinada
         canvas.width = cabezaImg.width + cuerpoImg.width + colaImg.width;
         canvas.height = Math.max(cabezaImg.height, cuerpoImg.height, colaImg.height);
 
-        // Draw the images onto the virtual canvas
+        // Dibujar las imágenes en el lienzo virtual
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(cabezaImg, 0, 0);
         ctx.drawImage(cuerpoImg, cabezaImg.width, 0);
         ctx.drawImage(colaImg, cabezaImg.width + cuerpoImg.width, 0);
 
-        // Convert the canvas to a data URL
+        // Convertir el lienzo en una URL de datos
         const dataURL = canvas.toDataURL('image/png');
 
-        // Create an anchor element to trigger the download
+        // Crear un elemento de anclaje para iniciar la descarga
         const downloadLink = document.createElement('a');
         downloadLink.href = dataURL;
         downloadLink.download = 'perrito.png';
 
-        // Simulate a click on the anchor element to initiate the download
+        // Simular un clic en el elemento de anclaje para iniciar la descarga
         downloadLink.click();
 
-        // Remove the canvas element (optional)
+        // Eliminar el elemento del lienzo (opcional)
         canvas.remove();
     });
 }

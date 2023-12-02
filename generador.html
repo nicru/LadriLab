@@ -1,93 +1,106 @@
+<!--
+Este documento HTML representa la página web del "Generador" de LadriLab. El propósito de esta página es permitir a los usuarios crear imágenes personalizadas de perros combinando diferentes partes, como la cabeza, el cuerpo y la cola. 
+
+La página incluye una barra de navegación que facilita la transición entre la página de inicio y la del generador. Además, se utiliza un lienzo HTML para la combinación de imágenes y se proporciona un botón "Descargar Imagen" para que los usuarios puedan guardar sus creaciones.
+
+La estructura del documento se divide en secciones claramente definidas, como la barra de navegación, los contenedores de selección de partes y la sección de generación de imágenes. También se incluye información de pie de página sobre el proyecto y la institución educativa relacionada.
+
+La funcionalidad principal de esta página se logra a través de dos archivos JavaScript externos: "carousel.js" para la navegación entre imágenes y "img_combiner.js" para la combinación y descarga de imágenes.
+
+Este comentario tiene como objetivo proporcionar una visión general del propósito y la estructura de la página para facilitar la revisión y comprensión por parte del profesor.
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LadriLab - Generador</title>
-<link rel="stylesheet" href="styles_generador.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>LadriLab - Generador</title> <!-- Título de la página: LadriLab - Generador -->
+  <link rel="stylesheet" href="styles_generador.css"> <!-- Enlace al archivo de estilos CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Enlace a la fuente de Google Fonts -->
 
-<!-- Add Favicon -->
-<link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Agregar Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png"> <!-- Enlace al favicon del sitio -->
 
 </head>
 <body>
 
   <!-- Comienzo de la Barra de Navegación -->
 
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="container">
+  <!-- Navbar (Barra de navegación) -->
+  <nav class="navbar">
+    <div class="container">
       <div class="navbar-brand">
-          <a href="index.html">LadriLab</a>
+        <a href="index.html">LadriLab</a> <!-- Logo del sitio con enlace a la página de inicio -->
       </div>
       <ul class="navbar-menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="generador.html">Generador</a></li>
+        <li><a href="index.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
+        <li><a href="generador.html">Generador</a></li> <!-- Enlace a la página del generador -->
       </ul>
-  </div>
-</nav>
-
-<!-- Final de la Barra de Navegación -->
-
-<!-- Comienzo de la Sección de Contenidos -->
-
-<section class="contenedores">
-  
-  <!-- Primer contenedor (Cabeza) -->
-  <div class="contenedor contenedor-cabeza">
-    <img src="img/dibujos perritos/Perro_1_Cabeza.png" alt="Cabeza del perro">
-    <div class="button-group">
-      <button class="prev-button" onclick="navigate('prev', 'cabeza')">Anterior</button>
-      <button class="next-button" onclick="navigate('next', 'cabeza')">Siguiente</button>
     </div>
-  </div>
-  
-  <!-- Segundo contenedor (Cuerpo) -->
-  <div class="contenedor contenedor-cuerpo">
-    <img src="img/dibujos perritos/Perro_1_Cuerpo.png" alt="Cuerpo del perro">
-    <div class="button-group">
-      <button class="prev-button" onclick="navigate('prev', 'cuerpo')">Anterior</button>
-      <button class="next-button" onclick="navigate('next', 'cuerpo')">Siguiente</button>
+  </nav>
+
+  <!-- Final de la Barra de Navegación -->
+
+  <!-- Comienzo de la Sección de Contenidos -->
+
+  <section class="contenedores">
+
+    <!-- Primer contenedor (Cabeza) -->
+    <div class="contenedor contenedor-cabeza">
+      <img src="img/dibujos perritos/Perro_1_Cabeza.png" alt="Cabeza del perro"> <!-- Imagen de la cabeza del perro -->
+      <div class="button-group">
+        <button class="prev-button" onclick="navigate('prev', 'cabeza')">Anterior</button>
+        <button class="next-button" onclick="navigate('next', 'cabeza')">Siguiente</button>
+      </div>
     </div>
-  </div>
-  
-  <!-- Tercer contenedor (Cola) -->
-  <div class="contenedor contenedor-cola">
-    <img src="img/dibujos perritos/Perro_1_Cola.png" alt="Cola del perro">
-    <div class="button-group">
-      <button class="prev-button" onclick="navigate('prev', 'cola')">Anterior</button>
-      <button class="next-button" onclick="navigate('next', 'cola')">Siguiente</button>
+
+    <!-- Segundo contenedor (Cuerpo) -->
+    <div class="contenedor contenedor-cuerpo">
+      <img src="img/dibujos perritos/Perro_1_Cuerpo.png" alt="Cuerpo del perro"> <!-- Imagen del cuerpo del perro -->
+      <div class="button-group">
+        <button class="prev-button" onclick="navigate('prev', 'cuerpo')">Anterior</button>
+        <button class="next-button" onclick="navigate('next', 'cuerpo')">Siguiente</button>
+      </div>
     </div>
+
+    <!-- Tercer contenedor (Cola) -->
+    <div class="contenedor contenedor-cola">
+      <img src="img/dibujos perritos/Perro_1_Cola.png" alt="Cola del perro"> <!-- Imagen de la cola del perro -->
+      <div class="button-group">
+        <button class="prev-button" onclick="navigate('prev', 'cola')">Anterior</button>
+        <button class="next-button" onclick="navigate('next', 'cola')">Siguiente</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Inicio de la Sección de Canvas (Lienzo) -->
+
+  <div class="download-button-container">
+    <button class="download-button" onclick="combineImagesAndDownload()">Descargar Imagen</button> <!-- Botón para descargar la imagen generada -->
   </div>
+  <canvas id="canvas"></canvas> <!-- Elemento de lienzo HTML -->
 
-</section>
+  <!-- Final de la Sección de Canvas (Lienzo) -->
 
-<!-- Inicio de la Sección de Canvas -->
+  <!-- Final de la Sección de Contenidos -->
 
-<div class="download-button-container">
-  <button class="download-button" onclick="combineImagesAndDownload()">Descargar Imagen</button>
-</div>
-<canvas id="canvas"></canvas>
+  <!-- Comienzo del Footer (Pie de página) -->
 
-<!-- Final de la Sección de Canvas -->
+  <footer>
+    <p class="left">Proyecto Web para Programación Creativa</p>
+    <p class="right">Escuela de Diseño UC, Pontificia Universidad Católica de Chile</p>
+  </footer>
 
-<!-- Final de la Sección de Contenidos -->
+  <!-- Final del Footer (Pie de página) -->
 
-<!-- Comienzo del Footer -->
+  <!-- Inicio de la Sección Javascript -->
 
-<footer>
-  <p class="left">Proyecto Web para Programación Creativa</p>
-  <p class="right">Escuela de Diseño UC, Pontificia Universidad Católica de Chile</p>
-</footer>
-<!-- Final del Footer -->
+  <script src="carousel.js"></script> <!-- Enlace al archivo JavaScript "carousel.js" -->
+  <script src="img_combiner.js"></script> <!-- Enlace al archivo JavaScript "img_combiner.js" -->
 
-<!-- Inicio de la Sección Javascript -->
-
-<script src="carousel.js"></script>
-<script src="img_combiner.js"></script>
-
-<!-- Final de la Sección Javascript -->
+  <!-- Final de la Sección Javascript -->
 
 </body>
 </html>
