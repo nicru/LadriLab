@@ -93,9 +93,9 @@ body {
 
 /* Elimina la posición absoluta y la alineación vertical */
 .prev-button, .next-button {
-    /* Propiedades eliminadas: position, top, left, right, transform */
     background: rgba(52, 152, 219, 0.8); /* Fondo semitransparente */
     color: white; /* Texto blanco */
+    line-height: first; /* alto de línea para visibilidad completa de los botones */
     border: none; /* Sin borde */
     padding: 1rem; /* Relleno del botón */
     cursor: pointer; /* Cambia el cursor a una mano al pasar el mouse */
