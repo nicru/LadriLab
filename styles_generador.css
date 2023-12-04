@@ -102,7 +102,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave para una mejor visibilidad */
     flex-grow: 1; /* Permite que los botones ocupen todo el espacio en su contenedor */
     margin: 0 5px; /* Agrega margen entre los botones */
-    font-size: 2em; /* Aumentar el tamaño de fuente */
+    font-size: 1em; /* Aumentar el tamaño de fuente */
 }
 
 .prev-button:hover, .next-button:hover {
@@ -164,7 +164,7 @@ footer {
     color: white; /* Texto blanco */
     border: none; /* Sin borde */
     padding: 1rem; /* Relleno del botón */
-    font-size: 3em; /* Tamaño de fuente */
+    font-size: 1.5em; /* Tamaño de fuente */
     cursor: pointer; /* Cambia el cursor a una mano */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave para una mejor visibilidad */
     margin: 0 5px; /* Margen entre botones */
